@@ -8,7 +8,7 @@ import { HideLoader, ShowLoader } from "../redux/loaderSlice";
 import { SetAllUsers, SetUser, SetAllChats } from "../redux/userSlice";
 import { Socket } from "socket.io-client";
 import { io } from "socket.io-client";
-const socket = io('http://localhost:5000');
+const socket = io('https://chatty-jzdb.onrender.com');
 function ProtectedRoute({ children }) {
   const { user } = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
