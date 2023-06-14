@@ -23,6 +23,9 @@ function ProtectedRoute({ children }) {
         dispatch(SetUser(response.data));
         dispatch(SetAllUsers(allUsersResponse.data));
         dispatch(SetAllChats(allChatsResponse.data));
+        toast("Use Desktop mode to get the best viewing experience on smartphone",{
+          duration:6000
+        })
       } else {
         toast.error(response.message);
         localStorage.removeItem("token");
